@@ -6,7 +6,10 @@ import org.junit.jupiter.api.Test;
 
 class DeckTest {
 
-	
+	/**
+	 * This case tests the createDeck() method from the Deck() class.
+	 * The length of the deck should be 52 following the deck creation.
+	 */
 	@Test
 	void testCreateDeck() {
 		Deck myTestDeck = new Deck();
@@ -15,7 +18,9 @@ class DeckTest {
 		assertEquals(myDeckofCards.length,52);
 	}
 	
-	
+	/**
+	 * This case tests the spades suit for 13 total cards.
+	 */
 	@Test
 	void testSpadesSuite() {
 		Deck myTestDeck = new Deck();
@@ -30,6 +35,9 @@ class DeckTest {
 		assertEquals(spadesSuite.size(),13, "The size is Spades suit incorrect.");
 	}
 	
+	/**
+	 * This case tests the Club suit for 13 total cards.
+	 */
 	@Test
 	void testClubSuite() {
 		Deck myTestDeck = new Deck();
@@ -44,6 +52,9 @@ class DeckTest {
 		assertEquals(clubSuite.size(),13, "The size is Club suit incorrect.");
 	}
 	
+	/**
+	 * This case tests the Heart suit for 13 total cards.
+	 */
 	@Test
 	void testHeartSuite() {
 		Deck myTestDeck = new Deck();
@@ -58,6 +69,9 @@ class DeckTest {
 		assertEquals(heartSuite.size(),13, "The size is Heart suit incorrect.");
 	}
 	
+	/**
+	 * This case tests the Diamond suit for 13 total cards.
+	 */
 	@Test
 	void testDiamondSuite() {
 		Deck myTestDeck = new Deck();
