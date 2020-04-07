@@ -8,7 +8,7 @@ public class BlackjackSolitaire {
 	
 	Card[][] bjsBoard = new Card[4][5];
 	
-	FilledFrameVIewer view = new FilledFrameVIewer(); // This creates the GUI 
+	FilledFrameViewer view = new FilledFrameViewer(); // This creates the GUI 
 	/**
 	 * This function creates the game matrix/board
 	 * which will be used for placing and updating

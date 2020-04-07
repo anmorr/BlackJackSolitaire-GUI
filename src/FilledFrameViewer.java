@@ -5,9 +5,9 @@ import javax.swing.*;
  * @author myThinkTank
  *
  */
-public class FilledFrameVIewer {
+public class FilledFrameViewer {
 
-	public FilledFrameVIewer() {
+	public FilledFrameViewer() {
 		JFrame frame = new FilledFrame();
 		frame.setTitle("BlackJack Solitaire");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
