@@ -7,14 +7,20 @@ import javax.swing.*;
  */
 public class FilledFrameVIewer {
 
-	
-	public static void main(String[] args) {
-		
+	public FilledFrameVIewer() {
 		JFrame frame = new FilledFrame();
 		frame.setTitle("BlackJack Solitaire");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-		
 	}
+	
+//	public static void main(String[] args) {
+//		
+//		JFrame frame = new FilledFrame();
+//		frame.setTitle("BlackJack Solitaire");
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setVisible(true);
+//		
+//	}
 
 }

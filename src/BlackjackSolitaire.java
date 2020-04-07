@@ -7,6 +7,8 @@ public class BlackjackSolitaire {
 	Card[][] grid = new Card[4][5];
 	
 	Card[][] bjsBoard = new Card[4][5];
+	
+	FilledFrameVIewer view = new FilledFrameVIewer(); // This creates the GUI 
 	/**
 	 * This function creates the game matrix/board
 	 * which will be used for placing and updating
@@ -200,7 +202,7 @@ public class BlackjackSolitaire {
 		}
 		
 		/*
-		 * To handle the ACE, the approach will be to 
+		 * To handle the ACE Card, the approach will be to 
 		 * 1. total all of the rows and columns.
 		 * 2. Iterate back through, or on the first iteration, create a counter to keep track of any ACEs.
 		 * 3. If the counter is not 0 in the end, and the total is higher than 21 then change then 
@@ -216,9 +218,6 @@ public class BlackjackSolitaire {
 		 * 		}
 		 * 	}	
 		 */
-		
-		
-		
 		
 		for(int element: row1) {
 			if(element == 21) {

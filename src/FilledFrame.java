@@ -26,7 +26,9 @@ public class FilledFrame extends JFrame{
 		
 		setSize(FRAME_WIDTH, FRAME_HEIGHT);
 	}
-	
+	/**
+	 * This method creates the components for the GUI
+	 */
 	private void createComponents() {
 		
 		buttonReplay = new JButton("Replay!");
@@ -41,10 +43,6 @@ public class FilledFrame extends JFrame{
 		
 		add(panel);
 		
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 	}
 
 }

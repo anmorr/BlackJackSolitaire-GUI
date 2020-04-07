@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 public class Deck {
 	
@@ -107,16 +108,25 @@ public class Deck {
 	 * This main function is used for testing the Deck class.
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		Deck myDeck = new Deck();
-		Card[] myDeckofCards;
-		myDeckofCards = myDeck.createDeck();
-		for (Card card: myDeckofCards) {
-			System.out.println(card.rankAndSuit);
-		}
-		myDeckofCards = myDeck.suffle(myDeckofCards);
-		for (Card card: myDeckofCards) {
-			System.out.println(card.rankAndSuit);
-		}
-	}
+//	public static void main(String[] args) {
+//		Deck myDeck = new Deck();
+//		Card[] myDeckofCards;
+//		myDeckofCards = myDeck.createDeck();
+//		for (Card card: myDeckofCards) {
+//			System.out.println(card.rankAndSuit);
+//		}
+//		myDeckofCards = myDeck.suffle(myDeckofCards);
+//		for (Card card: myDeckofCards) {
+//			System.out.println(card.rankAndSuit);
+//		}
+//		System.out.println("\n************\n");
+//		ArrayList<Card> spadesSuite = new ArrayList<Card>();
+//		myDeckofCards = myDeck.createDeck();
+//		for (Card c : myDeckofCards) {
+//			if(c.getRankandSuit().contains("S")) {
+//				spadesSuite.add(c);
+//				System.out.println(c.getRankandSuit() + " Suite Size = " + spadesSuite.size());
+//			}
+//		}
+//	}
 }
