@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
 import javax.swing.*;
 /**
@@ -31,17 +32,50 @@ public class FilledFrame extends JFrame{
 	 */
 	private void createComponents() {
 		
-		buttonReplay = new JButton("Replay!");
-		labelTime = new JLabel("Time:");
-		labelScore = new JLabel("Score:");
+//		buttonReplay = new JButton("Replay!");
+//		labelTime = new JLabel("Time:");
+//		labelScore = new JLabel("Score:");
+//		
+//		JPanel panel = new JPanel();
+//		
+//		
+//		panel.add(labelTime, BorderLayout.WEST);
+//		panel.add(labelScore);
+//		panel.add(buttonReplay);
+//		
+//		add(panel);
 		
-		JPanel panel = new JPanel();
+		JPanel p1 = new JPanel();
+		p1.setLayout(new BorderLayout());
+		p1.add(new JButton("A"));
+		p1.add(new JButton("B"));
+//		p1.add(new JButton("C"));
+//		p1.add(new JButton("D"));
+//		p1.add(new JButton("E"));
 		
-		panel.add(labelTime);
-		panel.add(labelScore);
-		panel.add(buttonReplay);
+		JPanel p2 = new JPanel();
+		p2.setLayout(new GridLayout(3, 2));
+		p2.add(new JButton("F"));
+		p2.add(new JButton("G"));
+		p2.add(new JButton("H"));
+		p2.add(new JButton("I"));
+		p2.add(new JButton("J"));
+		p2.add(new JButton("K"));
 		
-		add(panel);
+		
+		JPanel p3 = new JPanel();
+		p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
+		p3.add(new JButton("L"));
+		p3.add(new JButton("M"));
+		
+		
+//		container.setLayout(new BorderLayout());
+//		container.add(p1);
+//		container.add(p2);
+//		container.add(p3);
+		add(p1, BorderLayout.CENTER);
+		add(p2, BorderLayout.SOUTH);
+		add(p3, BorderLayout.EAST);
 		
 	}
 

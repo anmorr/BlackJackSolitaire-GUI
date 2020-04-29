@@ -1,5 +1,11 @@
 import java.util.ArrayList;
 import java.util.Random;
+
+/**
+ * This class creates a deck of cards.
+ * @author myThinkTank
+ *
+ */
 public class Deck {
 	
 	String dealtCard;
@@ -23,43 +29,43 @@ public class Deck {
 			for(int i = 0; i < 13; i++) {
 				if (count < 11) {
 					cards[deckCounter] = new Card();
-					cards[deckCounter].rank = Integer.toString(count);
+					cards[deckCounter].setRank(Integer.toString(count)); //= Integer.toString(count);
 					rank = Integer.toString(count);
-					cards[deckCounter].rankAndSuit = rank + suits[j];
+					cards[deckCounter].setRankAndSuit(rank + suits[j]);
 //					System.out.print(cards[deckCounter].rankAndSuit + " ");
-					cards[deckCounter].value = count;
+					cards[deckCounter].setValue(count);
 					count++;
 					deckCounter++;
 				}
 				if (count == 11) {
 					cards[deckCounter] = new Card();
-					cards[deckCounter].rankAndSuit = "A" + suits[j];
+					cards[deckCounter].setRankAndSuit("A" + suits[j]); ;
 //					System.out.print(cards[deckCounter].rankAndSuit + " ");
-					cards[deckCounter].value = 11;
+					cards[deckCounter].setValue(11);
 					count++;
 					deckCounter++;
 				}
 				if (count == 12) {
 					cards[deckCounter] = new Card();
-					cards[deckCounter].rankAndSuit = "K" + suits[j];
+					cards[deckCounter].setRankAndSuit("K" + suits[j]);
 //					System.out.print(cards[deckCounter].rankAndSuit + " ");
-					cards[deckCounter].value = 10;
+					cards[deckCounter].setValue(10);
 					count++;
 					deckCounter++;
 				}
 				if (count == 13) {
 					cards[deckCounter] = new Card();
-					cards[deckCounter].rankAndSuit = "Q" + suits[j];
+					cards[deckCounter].setRankAndSuit("Q" + suits[j]); 
 //					System.out.print(cards[deckCounter].rankAndSuit + " ");
-					cards[deckCounter].value = 10;
+					cards[deckCounter].setValue(10);
 					count++;
 					deckCounter++;
 				}
 				if (count == 14) {
 					cards[deckCounter] = new Card();
-					cards[deckCounter].rankAndSuit = "J" + suits[j];
+					cards[deckCounter].setRankAndSuit("J" + suits[j]); 
 //					System.out.print(cards[deckCounter].rankAndSuit + " ");
-					cards[deckCounter].value = 10;
+					cards[deckCounter].setValue(10);
 					count++;
 					deckCounter++;
 //					System.out.println();
@@ -101,32 +107,7 @@ public class Deck {
 	 */
 	public String deal(Card[] deck, int next) {
 		Card currentCard = deck[next];
-		return currentCard.rankAndSuit;
+		return currentCard.getRankandSuit();
 	}
 	
-	/**
-	 * This main function is used for testing the Deck class.
-	 * @param args
-	 */
-//	public static void main(String[] args) {
-//		Deck myDeck = new Deck();
-//		Card[] myDeckofCards;
-//		myDeckofCards = myDeck.createDeck();
-//		for (Card card: myDeckofCards) {
-//			System.out.println(card.rankAndSuit);
-//		}
-//		myDeckofCards = myDeck.suffle(myDeckofCards);
-//		for (Card card: myDeckofCards) {
-//			System.out.println(card.rankAndSuit);
-//		}
-//		System.out.println("\n************\n");
-//		ArrayList<Card> spadesSuite = new ArrayList<Card>();
-//		myDeckofCards = myDeck.createDeck();
-//		for (Card c : myDeckofCards) {
-//			if(c.getRankandSuit().contains("S")) {
-//				spadesSuite.add(c);
-//				System.out.println(c.getRankandSuit() + " Suite Size = " + spadesSuite.size());
-//			}
-//		}
-//	}
 }

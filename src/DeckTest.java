@@ -3,7 +3,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
-
+/**
+ * This is the Deck class test suite
+ * @author myThinkTank
+ *
+ */
 class DeckTest {
 
 	/**
@@ -15,6 +19,11 @@ class DeckTest {
 		Deck myTestDeck = new Deck();
 		Card[] myDeckofCards;
 		myDeckofCards = myTestDeck.createDeck();
+//		int currentCount = 0;
+//		for(Card c : myDeckofCards) {
+//			System.out.println("Rank and Suit: " + c.getRankandSuit() + " Value: " + "Index: " + currentCount);
+//			currentCount++;
+//		}
 		assertEquals(myDeckofCards.length,52);
 	}
 	
