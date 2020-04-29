@@ -1,0 +1,37 @@
+Project Name: BlackJackSolitaire-GUI
+Description:
+
+	This project is a GUI based version of the blackjacksolitaire game that was created in weeks 4 and 5 of the course. All of the same rules apply to the GUI version
+	that were applied to the console version. I used the hand out and rubric as guidelines. 
+	
+	To develop the game, I chose to use Java Swing. This provided for ease of use, along with a wealth of resources to get knowledge and ideas. The project is structured as follows:
+	
+	1. The main() method of the BlackjackSolitaireRunner.java class is the engine of the game. Specifically, this game calls the BlackjackSolitare.java class.
+	
+	2. The BlackjackSolitaire.java class handles the coordinates the game logic and builds the GUI by calling other classes.
+	
+	   All future action within the project occurs via this class:
+	   
+		a. The first thing to notice about the BlackjackSolitaire.java class is that it inherits from the JFrame class, which is from Swing. This inheritance creates a Frame
+		   for the GUI using the Border Layout. The border layout sections off the frame into 4 separate parts: North, South, East, and West.
+		b. Within the Constructor of the BlackjackSolitaire.java class, the additional classes are called to complete the GUI:
+		   1. North - In the north portion of the layout, a TitlePanel object is created, which inherits from JPanel that contains the title of the game, and also serves as 
+		              the score board.
+		   2. West - In the south portion of the layout, a CurrentCardDisplay object is created, which inherits from the JPanel class. Within this object, a JPanel
+		             is created to hold the current card the user has to choose, and its accompanying label "Current Card:". There is also a JButton that is used to 
+		             serve as the display for the actual current card value.
+		   3. Center - A game board is created. This is the most comprehensive part of the game's GUI, as it is used to create the main game board, spaces 1-16, and the
+		               discard spaces. This functionality happens in the CardBoard.java class. This class takes advantage of interface concepts, in relation to the ActionListener 
+		               of the buttons, which are used as card positions on the board. Additionally, the use of inner classes allowed for a more cohesive design, as it would've been 
+		               unnecessarily complex to create separate classes outside of the board class. This design decision was made based on information in the class text from Chapter 10.
+		   4. East - There is a panel placed to provide a buffer between the gameboard and the frame. Also, this allows for the inclusion of a replay button in future development.
+		   5. South - Unused.
+	
+	Overall, I really enjoyed this project. It taught me how to make code more modular to allow for more efficient code reuse. I have to admit, it was a bit daunting trying to decide
+	where to begin. I took advice the TA gave in the console game feedback and created additional classes instead of one large BlackjackSolitaire.java class. I feel like I can
+	now have the tools to take each individual function of the game and reuse it in another game. For instance, now if I ever make a card game, I have a card and deck class that can
+	be reused.
+	
+	JUnit Tests: There are JUnit tests for the Deck Class and the BJSGameScorer class. The reason I chose these classes was because they provide assurance that the program will function
+	             as intended. When I ran the test against the BJSGameScorer test, I actually found a bug that would cause any rows that contained an ACE to be calculated incorrectly.
+	             The bug would only manifest itself when the total happened to be above 21.
