@@ -13,7 +13,7 @@ public class BlackjackSolitaireRunner {
 		BlackjackSolitaire bjs = new BlackjackSolitaire(); 
 		bjs.setTitle("Blackjack Solitaire");
 		bjs.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		bjs.getContentPane().setBackground(Color.GREEN);
+		bjs.getContentPane().setBackground(Color.GREEN);
 		bjs.setVisible(true);
 		bjs.play();
 	}
