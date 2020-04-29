@@ -1,4 +1,5 @@
 Project Name: BlackJackSolitaire-GUI
+Github Link: https://github.com/anmorr/BlackJackSolitaire-GUI.git
 Description:
 
 	This project is a GUI based version of the blackjacksolitaire game that was created in weeks 4 and 5 of the course. All of the same rules apply to the GUI version
